@@ -35,7 +35,7 @@ const Header = () => {
               {activePathName === route.path && (
                 <motion.div
                   layoutId="header-active-link"
-                  className="h-1 w-full bg-accent absolute bottom-0"
+                  className="h-1 w-full bg-accent absolute bottom-0 rounded"
                 ></motion.div>
               )}
             </li>
