@@ -1,3 +1,5 @@
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
@@ -21,8 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} bg-gray-950 text-white`}>
-        <Header />
-        {children}
+        <Container>
+          <Header />
+          {children}
+          <Footer />
+        </Container>
       </body>
     </html>
   );
