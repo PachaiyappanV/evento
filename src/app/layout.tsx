@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.className} bg-gray-950 text-white`}>
+      <body
+        className={`${lato.className} bg-gray-950 text-white overflow-y-scroll`}
+      >
         <Container>
           <Header />
           {children}
