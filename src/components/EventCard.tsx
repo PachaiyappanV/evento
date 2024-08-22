@@ -14,7 +14,7 @@ const EventCard = ({ event }: Props) => {
           <Image
             src={event.imageUrl}
             alt={event.name}
-            layout="fill"
+            fill
             objectFit="cover"
             className="w-full h-full transform transition-transform duration-300 
           ease-in-out hover:scale-110 hover:cursor-pointer"
@@ -35,7 +35,11 @@ const EventCard = ({ event }: Props) => {
               day: "2-digit",
             })}
           </p>
-          <p className="text-xs uppercase text-accent">Nov</p>
+          <p className="text-xs uppercase text-accent">
+            {new Date(event.date).toLocaleDateString("en-US", {
+              month: "short",
+            })}
+          </p>
         </div>
       </div>
     </Link>
