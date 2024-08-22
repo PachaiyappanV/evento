@@ -7,6 +7,7 @@ type Props = {
     slug: string;
   };
 };
+
 const EventPage = async ({ params: { slug } }: Props) => {
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events/${slug}`
